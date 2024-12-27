@@ -1,0 +1,15 @@
+<div  class="one-way-binding" text="center">
+    <!-- <p>Name:{{ name }}</p> 
+    <p>Email:{{ email }}</p>
+    <p>Pass:{{ pass }}</p> -->
+      <!-- Property Binding -->
+       <!-- <h1>Name:{{name}}</h1> -->
+    <input type="text" [value]="name" placeholder="Name" />
+    <input type="email" [value]="email" placeholder="Email" />
+    <input type="password" [value]="pass" placeholder="Password" />
+    <div>
+        <!-- evenet Binding -->
+        <button (click)="incrementCounter()" >Incremnet</button>
+        <p>Counter:{{counter}}</p>
+    </div>
+</div>

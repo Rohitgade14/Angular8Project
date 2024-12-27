@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <form [formGroup]="signUpForm" (ngSubmit)='onSubmit()'>
+              <div formGroupName="userData">
+                <div class="form-group">
+                <label for="">Username</label>
+                    <input type="text" class="form-control" formControlName="username">
+                    <span class="help-block" 
+                    *ngIf="!signUpForm.get('userData.username').valid && signUpForm.get('userData.username').touched">
+                     <span *ngIf="signUpForm.get('userData.username').errors.required"> UserName is required</span>
+                     <span *ngIf="signUpForm.get('userData.username').errors.nameIsRestricted">UserName is Not Valid</span>
+                    </span>
+                </div>
+                  <div class="form-group">
+                    <label for="">Email</label>
+                       <input type="text" class="form-control" formControlName="email">
+                       <span class="help-block" 
+                       *ngIf="!signUpForm.get('userData.email').valid && signUpForm.get('userData.email').touched">
+                      
+                       Plase Enter Valid Email</span>
+                  </div>
+                </div>
+                  <div *ngFor="let gender of genders">
+                          <label for="">
+                            <input type="radio" name="gender" [value]="gender" formControlName="gender"/> {{gender}}
+                          </label>
+                  </div>
+
+                  <div formArrayName="hobbies">
+                <div class="my-2">
+                  <button class="button" (click)="onAddHobby()" class="btn btn-sm btn-warning">AddHobies</button>
+                </div>
+                <div class="formgroup" *ngFor="let hobby of hobbyControls; let i=index">
+                  <!-- *ngFor="let hobby of signUpForm.get('hobbies').controls -->
+                     <input type="text" class="form-control" [formControlName]="i">
+                </div>
+              </div>
+                  <div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+                   
+                     
+            </form>
+        </div>
+    </div>
+</div>

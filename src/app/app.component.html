@@ -1,0 +1,39 @@
+<!-- The content below is only a placeholder and can be replaced. -->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <div>
+    <ul>
+      <li>
+        <a class="nav-link" [routerLink]="['/login']" routerLinkActive="active">Login</a>
+      </li>
+      <li>
+        <a class="nav-link" [routerLink]="['/template-forms']" routerLinkActive="active">Template Forms</a>
+      </li>
+          <li>
+            <a href="nav-link" [routerLink]="['/reactive-forms']" routerLinkActive="active">Reactive Forms</a>
+          </li>
+      <li>
+        <a class="nav-link" [routerLink]="['/one-way-binding']" routerLinkActive="active">one way Binding</a>
+      </li>
+      <li>
+        <a class="nav-link" [routerLink]="['/two-way-binding']" routerLinkActive="active">two way Binding</a>
+      </li>
+      <li>
+        <a class="nav-link" [routerLink]="['/pratice']" routerLinkActive="active">Pratice</a>
+      </li>
+      <li>
+        <a class="nav-link" [routerLink]="['/filter-pipes']" routerLinkActive="active">filter-pipes</a>
+      </li>
+      <li>
+        <a class="nav-link" [routerLink]="['/post']" routerLinkActive="active">post</a>
+      </li>
+      <li>
+        <a class="nav-link" [routerLink]="['/get']" routerLinkActive="active">get</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

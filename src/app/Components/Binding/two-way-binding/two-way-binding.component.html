@@ -1,0 +1,20 @@
+
+
+<form #userForm="ngForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Name</label>
+      <input id="name" name="name" [(ngModel)]="user.name" #nameInput="ngModel" />
+    </div>
+    <div ngModelGroup="userData" #userData="ngModelGroup">
+    <div>
+      <label for="email">Email</label>
+      <input id="email" name="email" [(ngModel)]="user.email" #emailInput="ngModel" />
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input id="password" name="password" [(ngModel)]="user.password" #passwordInput="ngModel" />
+    </div>
+  </div>
+    <button type="submit">Submit</button>
+  </form>
+  
